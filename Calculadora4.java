@@ -31,8 +31,8 @@ public class Calculadora4 {
         System.out.println("&&&&&&&Curso: Análise e Desenvolvimento de Sistemas - ADS&&&&&");
         System.out.println("&&&&&&Disciplina: Programação Orientada a Objetos - Java&&&&&&");
         System.out.println("&&&&&&&&&&&&&&&&Professor: George Mendes Marra****&&&&&&&&&&&&");
-        System.out.println("&Aluno(a):                                                                  &");
-        System.out.println("&Data:                                                                      &");
+        System.out.println("&Aluno(a): Gabriel Ribeiro dos Santos                        &");
+        System.out.println("&Data: 24/08/2025                                            &");
         System.out.println("&&&&&&&&&&&&Programa Calculadora em Java. Versão: 2.0&&&&&&&&&");
         System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
         System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
