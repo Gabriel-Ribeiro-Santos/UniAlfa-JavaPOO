@@ -1,7 +1,6 @@
-# Repositório de Projetos Acadêmicos - Java POO
+# Repositório de Projetos Acadêmicos
 
-Este repositório tem como objetivo armazenar os projetos acadêmicos desenvolvidos durante a disciplina de **Programação Orientada a Objetos (POO)**, utilizando a linguagem **Java**.  
-
+Este repositório tem como objetivo armazenar os projetos acadêmicos desenvolvidos durante o curso de Análise e Desenvolvimento de Software
 Atualmente, o repositório inclui versões de calculadoras e será atualizado com outros exercícios e projetos que forem passados pelo professor.
 
 ---
@@ -14,20 +13,9 @@ Atualmente, o repositório inclui versões de calculadoras e será atualizado co
 
 ---
 
-## Como Executar os Projetos
-
-1. Abra o terminal no diretório do projeto desejado.
-2. Compile o código-fonte Java:
-3. Execute o programa:
-   ```bash
-   javac Calculadora4.java
-   java Calculadora4
-
----
-
 ### Sobre o Repositório
 - Este repositório será atualizado continuamente com novas versões dos projetos.
-- Cada projeto/ferramenta deve estar dentro de uma pasta separada.
+- Cada projeto estará dentro de sua própria pasta.
 - Recomenda-se manter o código-fonte organizado e documentado.
 
 ---
