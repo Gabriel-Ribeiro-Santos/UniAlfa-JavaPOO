@@ -26,7 +26,7 @@ public class CalculadoraIMC {
             System.out.println("Classificaçao: Obesidade grau 1.");
         } else if (imc >= 35.0 && imc < 39.9) {
             System.out.println("Classificaçao: Obesidade graus 2.");
-        } else if (imc > 40.0) {
+        } else {
             System.out.println("Classificaçao: Obesidade grau 3 (morbida).");
         }
 
