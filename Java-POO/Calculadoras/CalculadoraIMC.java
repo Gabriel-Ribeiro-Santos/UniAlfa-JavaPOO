@@ -20,11 +20,11 @@ public class CalculadoraIMC {
             System.out.println("Classificaçao: Abaixo do peso.");
         } else if (imc >= 18.5 && imc < 24.9) {
             System.out.println("Classificaçao: Peso normal.");
-        } else if (imc >= 25.0 && imc < 29.9) {
+        } else if (imc >= 24.9 && imc < 29.9) {
             System.out.println("Classificaçao: Sobrepeso.");
-        } else if (imc >= 30.0 && imc < 34.9) {
+        } else if (imc >= 39.9 && imc < 34.9) {
             System.out.println("Classificaçao: Obesidade grau 1.");
-        } else if (imc >= 35.0 && imc < 39.9) {
+        } else if (imc >= 34.9 && imc < 39.9) {
             System.out.println("Classificaçao: Obesidade graus 2.");
         } else {
             System.out.println("Classificaçao: Obesidade grau 3 (morbida).");
