@@ -1,3 +1,14 @@
+/*
+🔎 O que o programa faz:
+
+Este programa calcula o **IMC (Índice de Massa Corporal)** do usuário.
+Ele segue os seguintes passos:
+1. Solicita ao usuário o peso (kg) e a altura (m).
+2. Aplica a fórmula do IMC → peso / (altura * altura).
+3. Classifica o resultado em faixas (abaixo do peso, normal, sobrepeso e obesidade).
+4. Exibe a classificação correspondente na tela.
+*/
+
 import java.util.Scanner;
 
 public class CalculadoraIMC {

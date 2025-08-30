@@ -1,3 +1,12 @@
+/*
+🔎 O que o código faz
+
+- Usa Scanner para ler três números inteiros informados pelo usuário.
+- Calcula o produto (multiplicação) entre esses três números.
+- Mostra o resultado final na tela.
+- Fecha o Scanner ao final da execução.
+*/
+
 import java.util.Scanner; // Importa a classe Scanner para ler dados do usuáro.
 
 public class CalculadoraProduto {

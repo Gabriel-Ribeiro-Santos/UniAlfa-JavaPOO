@@ -1,8 +1,20 @@
-
 /*
-Em Java, a classe Math faz parte do pacote java.lang, que é importado automaticamente em todos os programas Java. 
-Isso significa que você não precisa explicitamente importar a biblioteca Math para usar suas funções.
+🔎 O que o programa faz:
+
+Este programa implementa uma **calculadora científica em Java** com diversas operações matemáticas.
+Ele segue os seguintes passos:
+1. Exibe um cabeçalho com informações da disciplina, aluno e versão.
+2. Solicita ao usuário dois números.
+3. Permite escolher a operação desejada (soma, subtração, multiplicação, divisão,
+   raiz quadrada, raiz cúbica, logaritmo natural, potência e seno).
+4. Realiza o cálculo conforme a opção escolhida.
+5. Exibe o resultado na tela.
+
+⚠ Observações:
+- Algumas operações (raiz, log, potência e seno) encerram o programa logo após a execução.
+- Há tratamento para divisão por zero.
 */
+
 import java.util.Scanner; // importa a classe Scanner para permitir a leitura da entrada do usuário.
 
 public class Calculadora4 {
