@@ -1,68 +1,162 @@
 // Superclasse Animal
 class Animal {
     // Atributo comum a todos os animais, acessível diretamente nas subclasses e
-    // fora da classe
+    // fora da classe.
     public String nome;
+    private String raca;
+    private String racao;
+    private double peso;
 
-    // Método que define um comportamento padrão para a emissão de som de um animal
+    // Construtor padrão.
+    public Animal() {
+        this.nome = "";
+        this.raca = "Desconhecida";
+        this.racao = "Ração Comum";
+        this.peso = 0;
+    }
+
+    // Construtor com parâmetros.
+    public Animal(String nome, String raca, String racao, double peso) {
+        this.nome = nome;
+        this.raca = raca;
+        this.racao = racao;
+        this.peso = peso;
+    }
+
+    // Getters e Setters
+    public String getRaca() {
+        return raca;
+    }
+
+    public void setRaca(String raca) {
+        this.raca = raca;
+    }
+
+    public String getRacao() {
+        return racao;
+    }
+
+    public void setRacao(String racao) {
+        this.racao = racao;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        if (peso < 0) {
+            throw new IllegalArgumentException("Peso não pode ser negativo.");
+        }
+        this.peso = peso;
+    }
+
+    // Método que define um comportamento padrão para a emissão de som de um animal.
     // Este método será sobrescrito pelas subclasses para fornecer um comportamento
-    // mais específico
+    // mais específico.
     public void emitirSom() {
         System.out.println("O animal faz um som generico.");
     }
 }
 
-// Subclasse Cachorro que herda da superclasse Animal
+// Subclasse Cachorro que herda da superclasse Animal.
 class Cachorro extends Animal {
+    public Cachorro(String nome, String raca, String racao, double peso) {
+        super(nome, raca, racao, peso);
+    }
 
-    // Sobrescreve (override) o método emitirSom da superclasse Animal
+    // Sobrescreve (override) o método emitirSom da superclasse Animal.
     // Isso permite que a classe Cachorro forneça sua própria implementação
-    // específica para emitirSom
+    // específica para emitirSom.
     @Override
     public void emitirSom() {
         System.out.println("O cachorro late: Au Au!");
     }
 }
 
-// Subclasse Gato que herda da superclasse Animal
+// Subclasse Gato que herda da superclasse Animal.
 class Gato extends Animal {
+    public Gato(String nome, String raca, String racao, double peso) {
+        super(nome, raca, racao, peso);
+    }
 
     // Sobrescreve (override) o método emitirSom da superclasse Animal
     // Assim como a classe Cachorro, a classe Gato fornece sua própria implementação
-    // específica para emitirSom
+    // específica para emitirSom.
     @Override
     public void emitirSom() {
         System.out.println("O gato mia: Miau!");
     }
 }
 
+// Subclasse Camelo que herda da superclasse Animal.
+class Camelo extends Animal {
+    public Camelo(String nome, String raca, String racao, double peso) {
+        super(nome, raca, racao, peso);
+    }
+
+    // Sobrescreve (override) o método emitirSom da superclasse Animal.
+    @Override
+    public void emitirSom() {
+        System.out.println("O camelo faz um som: Braaa!");
+    }
+}
+
+// Subclasse Cavalo que herda da superclasse Animal.
+class Cavalo extends Animal {
+    public Cavalo(String nome, String raca, String racao, double peso) {
+        super(nome, raca, racao, peso);
+    }
+
+    // Sobrescreve (override) o método emitirSom da superclasse Animal.
+    @Override
+    public void emitirSom() {
+        System.out.println("O cavalo relincha: Hiin in in!");
+    }
+}
+
+// Subclasse Tubarao que herda da superclasse Animal.
+class Tubarao extends Animal {
+    public Tubarao(String nome, String raca, String racao, double peso) {
+        super(nome, raca, racao, peso);
+    }
+
+    // Sobrescreve (override) o método emitirSom da superclasse Animal.
+    @Override
+    public void emitirSom() {
+        System.out.println("O tubarao nao tem um som definido!!");
+    }
+}
+
 // Classe principal que contém o método main, ponto de entrada da aplicação Java
 public class Heranca2 {
     public static void main(String[] args) {
-        // Criando uma instância (objeto) da superclasse Animal
-        Animal a = new Animal();
-        // Chamando o método emitirSom() no objeto 'a' da classe Animal
-        // Será executada a implementação do método definida na própria classe Animal
-        a.emitirSom(); // Saída esperada: O animal faz um som genérico.
+        // Criando todos os animais
+        Animal a = new Animal("Animal Generico", "Desconhecida", "Racao Comum", 0);
+        Cachorro c = new Cachorro("Neguinha", "Cachorro", "Premium para cachorros", 19);
+        Gato g = new Gato("Zoe", "Gato", "Racao Premium", 9);
+        Camelo cam = new Camelo("Bactriano", "Camelo", "Racao para camelos", 450);
+        Cavalo cav = new Cavalo("Pe de pano", "Cavalo", "Capim", 380);
+        Tubarao t = new Tubarao("Bruce", "Tubarao-Branco", "Peixes", 800);
 
-        // Criando uma instância (objeto) da subclasse Cachorro
-        Cachorro c = new Cachorro();
-        // Acessando o atributo 'nome' que foi herdado da superclasse Animal
-        c.nome = "Rex"; // Atribuindo o valor "Rex" ao atributo 'nome' do objeto 'c'
-        // Chamando o método emitirSom() no objeto 'c' da classe Cachorro
-        // Será executada a implementação do método sobrescrito na classe Cachorro
-        c.emitirSom(); // Saída esperada: O cachorro late: Au Au!
-        // Imprimindo o valor do atributo 'nome' do objeto 'c'
-        System.out.println("Nome do cachorro: " + c.nome); // Saída esperada: Nome do cachorro: Rex
+        // Imprimir informações de cada animal usando método auxiliar
+        imprimirInformacoes(a);
+        imprimirInformacoes(c);
+        imprimirInformacoes(g);
+        imprimirInformacoes(cam);
+        imprimirInformacoes(cav);
+        imprimirInformacoes(t);
+    }
 
-        // Criando uma instância (objeto) da subclasse Gato
-        Gato g = new Gato();
-        // Acessando o atributo 'nome' que foi herdado da superclasse Animal
-        g.nome = "Mimi"; // Atribuindo o valor "Mimi" ao atributo 'nome' do objeto 'g'
-        // Chamando o método emitirSom() no objeto 'g' da classe Gato
-        // Será executada a implementação do método sobrescrito na classe Gato
-        g.emitirSom(); // Saída esperada: O gato mia: Miau!
-        // Imprimindo o valor do atributo 'nome' do objeto 'g'
-        System.out.println("Nome do gato: " + g.nome); // Saída esperada: Nome do gato: Mimi
+    // Método auxiliar para imprimir informações formatadas de qualquer animal
+    public static void imprimirInformacoes(Animal animal) {
+        System.out.println("---------Classe " + animal.getClass().getSimpleName() + "--------------");
+        System.out.println("Nome: " + animal.nome);
+        System.out.println("Raca: " + animal.getRaca());
+        System.out.print("Som: ");
+        animal.emitirSom(); // Polimorfismo: cada subclasse imprimir o seu som.
+        System.out.println("Peso: " + (int) animal.getPeso() + "KG.");
+        System.out.println("Racao: " + animal.getRacao());
+        System.out.println("--------------Fim da Classe" + animal.getClass().getSimpleName() + "--------------\n");
     }
 }
