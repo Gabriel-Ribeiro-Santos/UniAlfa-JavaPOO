@@ -218,7 +218,7 @@
 <details>
 <sumary>Resposta:</sumary>
 
-\*\*- b) Segurança e controle sobre os dados da classe.
+**- b) Segurança e controle sobre os dados da classe.**
 
 </details>
 
